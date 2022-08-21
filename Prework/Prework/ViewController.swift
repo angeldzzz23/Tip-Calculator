@@ -37,11 +37,15 @@ class ViewController: UIViewController {
         
     }
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        billAmountTextfield.becomeFirstResponder()
+    }
+    
     @IBAction func enableOrDisableDarkModeBtnIsPressed(_ sender: Any) {
         
-        
-        
-        
+     
         
         
         darkmodeIsEnabled = !darkmodeIsEnabled
