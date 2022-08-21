@@ -9,16 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    
     // properties
-    
     @IBOutlet weak var billAmountTextfield: UITextField!
-    
     @IBOutlet weak var tipAmountLbl: UILabel!
-    
     @IBOutlet weak var tipControl: UISegmentedControl!
-    
     @IBOutlet weak var totalLabel: UILabel!
+    
+    
     
     
     override func viewDidLoad() {
@@ -27,8 +24,6 @@ class ViewController: UIViewController {
     }
     
     /// MARK: Actions
-    
-    
     @IBAction func calculateTip(_ sender: Any) {
         let bill = Double(billAmountTextfield.text!) ?? 0
         
@@ -41,8 +36,6 @@ class ViewController: UIViewController {
         tipAmountLbl.text = String(format: "$%.2f", tip)
         // Update total amount
         totalLabel.text = String(format: "$%.2f", total)
-        
-        
         
     }
     
