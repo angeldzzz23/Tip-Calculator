@@ -39,6 +39,11 @@ class ViewController: UIViewController {
     
     @IBAction func enableOrDisableDarkModeBtnIsPressed(_ sender: Any) {
         
+        
+        
+        
+        
+        
         darkmodeIsEnabled = !darkmodeIsEnabled
         
         if darkmodeIsEnabled {
@@ -57,10 +62,7 @@ class ViewController: UIViewController {
     }
     
     
-    
-    
     // MARK: action methods
-    
     // calculates the total
     @IBAction func CalaculateTotal(_ sender: Any) {
         // performs calculations
@@ -74,7 +76,6 @@ class ViewController: UIViewController {
     
     
     // MARK: helper functions
-    
     
     // updates all of the views
     func updateViews(with tip:Double, total: Double, split: Double ) {
