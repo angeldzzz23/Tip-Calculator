@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
     // properties
     @IBOutlet weak var billAmountTextfield: UITextField!
     @IBOutlet weak var tipAmountLbl: UILabel!
@@ -18,14 +19,62 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var splitLabel: UILabel!
     
+    @IBOutlet weak var darkModeButton: UIBarButtonItem!
+    
+    var darkmodeIsEnabled = false
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+ 
+        
+    }
+    
+    /// MARK: Actions
+    @IBAction func calculateTip(_ sender: Any) {
+      // NOthing to do he
+        
+    }
+    
+    @IBAction func enableOrDisableDarkModeBtnIsPressed(_ sender: Any) {
+        
+        darkmodeIsEnabled = !darkmodeIsEnabled
+        
+        if darkmodeIsEnabled {
+            
+            // update UI
+            overrideUserInterfaceStyle = .dark
+            navigationController?.overrideUserInterfaceStyle = .dark
+            darkModeButton.title = "Lights On"
+        } else{
+            overrideUserInterfaceStyle = .light
+            navigationController?.overrideUserInterfaceStyle = .light
+            darkModeButton.title = "Lights Off"
+        }
+        
+        
     }
     
     
-  
+    
+    
+    // MARK: action methods
+    
+    // calculates the total
+    @IBAction func CalaculateTotal(_ sender: Any) {
+        // performs calculations
+        let calcultions = calculate()
+        
+        // updates views
+        updateViews(with: calcultions.tip, total: calcultions.total,
+                    split: calcultions.split)
+        
+    }
+    
+    
+    // MARK: helper functions
+    
     
     // updates all of the views
     func updateViews(with tip:Double, total: Double, split: Double ) {
@@ -38,27 +87,7 @@ class ViewController: UIViewController {
         splitLabel.text = String(format: "$%.2f", split)
     }
     
-    /// MARK: Actions
-    @IBAction func calculateTip(_ sender: Any) {
-      // NOthing to do here
-        
-    }
     
-    
-   
-    
-    
-    @IBAction func CalaculateTotal(_ sender: Any) {
-        let calcultions = calculate()
-        
-        
-        updateViews(with: calcultions.tip, total: calcultions.total,
-                    split: calcultions.split)
-        
-    }
-    
-    
-    // MARK: helper functions
     // calcualtes the tip, totaal, and split
     func calculate() -> (tip:Double, total: Double, split: Double) {
         let bill = Double(billAmountTextfield.text!) ?? 0

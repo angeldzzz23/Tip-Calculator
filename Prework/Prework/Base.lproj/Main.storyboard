@@ -116,6 +116,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Tip Calculator" id="1uU-4s-btD">
+                        <barButtonItem key="leftBarButtonItem" title="Lights Off" style="plain" id="uGs-9A-OMH">
+                            <connections>
+                                <action selector="enableOrDisableDarkModeBtnIsPressed:" destination="BYZ-38-t0r" id="DMd-et-MGJ"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Calculate" id="AVP-Zt-9YN">
                             <connections>
                                 <action selector="CalaculateTotal:" destination="BYZ-38-t0r" id="ceI-qc-vQS"/>
@@ -125,6 +130,7 @@
                     <connections>
                         <outlet property="PartySizeTxtfield" destination="nLI-H7-23q" id="utv-da-bEy"/>
                         <outlet property="billAmountTextfield" destination="A4n-Q7-g9a" id="kHA-Bj-4hY"/>
+                        <outlet property="darkModeButton" destination="uGs-9A-OMH" id="OHk-pe-Jwq"/>
                         <outlet property="splitLabel" destination="4Kn-fA-uRU" id="oST-VW-9qH"/>
                         <outlet property="tipAmountLbl" destination="ihq-0h-AUa" id="yaC-3w-Mym"/>
                         <outlet property="tipControl" destination="D49-HE-29f" id="hJE-3V-gTT"/>
@@ -133,7 +139,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="55.072463768115945" y="69.642857142857139"/>
+            <point key="canvasLocation" x="-168" y="73"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9q3-gc-23n">
+            <objects>
+                <viewController id="bz5-Ry-UK4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B9D-sH-JR3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4Wb-YN-mEC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yqX-A3-H3X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="696" y="63"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wPl-YO-R2o">
