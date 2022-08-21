@@ -1,2 +1,58 @@
-# Prework
- 
+# Pre-work - *Calc*
+
+**Calc** is a tip calculator application for iOS.
+
+Submitted by: **Angel Zambrano**
+
+Time spent: **7** hours spent in total
+
+## User Stories
+
+The following **required** functionality is complete:
+
+* [x] User can enter a bill amount, choose a tip percentage, and see the tip and total values.
+* [x] User can select between tip percentages by tapping different values on the segmented control and the tip value is updated accordingly
+
+The following **optional** features are implemented:
+
+* [ ] UI animations
+* [ ] Remembering the bill amount across app restarts (if <10mins)
+* [ ] Using locale-specific currency and currency thousands separators.
+* [x] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
+
+The following **additional** features are implemented:
+
+- [x] Added the settings page
+- [x] Settings are remembered using userDefaults
+
+## Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+
+<img src='https://imgur.com/gallery/F58gu06' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+https://imgur.com/gallery/F58gu06
+
+![video2](https://user-images.githubusercontent.com/29695936/185813380-10853fd0-02b7-4b96-b4d7-de53e3212903.gif)
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
+
+
+## Notes
+
+The only challenge that I had was building the settings portion. I didnt know how to send data back to the viewcontroller and I ended up using delegation
+
+## License
+
+    Copyright [yyyy] [name of copyright owner]
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
