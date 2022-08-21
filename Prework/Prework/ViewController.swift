@@ -16,18 +16,32 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipControl: UISegmentedControl!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var PartySizeTxtfield: UITextField!
-    
     @IBOutlet weak var splitLabel: UILabel!
-    
     @IBOutlet weak var darkModeButton: UIBarButtonItem!
     
+    var percents = [Double]()
+    
     var darkmodeIsEnabled = false
+    
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
- 
+        
+//        let defaults = UserDefaults.standard
+//        defaults.set(false, forKey: KeyValues.darkmode)
+//        defaults.set(15.0, forKey: KeyValues.percentageOne)
+//        defaults.set(18.0, forKey: KeyValues.percentageTwo)
+//        defaults.set(20.9, forKey: KeyValues.percentageThree)
+        
+        
+//        let defaults = UserDefaults.standard
+//        defaults.double(forKey: KeyValues.percentageOne)
+//        print(defaults.double(forKey: KeyValues.percentageOne))
+        
+
         
     }
     
@@ -38,29 +52,36 @@ class ViewController: UIViewController {
     }
     
     
+
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         billAmountTextfield.becomeFirstResponder()
+        
+        // get user default things
+        let defaults = UserDefaults.standard
+        let percentOne = defaults.double(forKey: KeyValues.percentageOne)
+        let percentTwo =  defaults.double(forKey: KeyValues.percentageTwo)
+        let percentThree = defaults.double(forKey: KeyValues.percentageThree)
+        
+        percents.removeAll()
+        percents.append(contentsOf: [percentOne, percentTwo, percentThree])
+        
+        tipControl.setTitle("\(percents[0])%", forSegmentAt: 0)
+        tipControl.setTitle("\(percents[1])%", forSegmentAt: 1)
+        tipControl.setTitle("\(percents[2])%", forSegmentAt: 2)
+        
+        darkmodeIsEnabled = defaults.bool(forKey: KeyValues.darkmode)
+        
+        // configure dark mode
+        overrideUserInterfaceStyle = (darkmodeIsEnabled) ? .dark : .light
+        navigationController?.overrideUserInterfaceStyle = (darkmodeIsEnabled) ? .dark : .light
+                
+        
     }
     
     @IBAction func enableOrDisableDarkModeBtnIsPressed(_ sender: Any) {
-        
-     
-        
-        
-        darkmodeIsEnabled = !darkmodeIsEnabled
-        
-        if darkmodeIsEnabled {
-            
-            // update UI
-            overrideUserInterfaceStyle = .dark
-            navigationController?.overrideUserInterfaceStyle = .dark
-            darkModeButton.title = "Lights On"
-        } else{
-            overrideUserInterfaceStyle = .light
-            navigationController?.overrideUserInterfaceStyle = .light
-            darkModeButton.title = "Lights Off"
-        }
         
         
     }
@@ -107,7 +128,6 @@ class ViewController: UIViewController {
         
         return (tip, total, split)
         
-       
     }
     
 

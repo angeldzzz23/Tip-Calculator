@@ -13,6 +13,10 @@
 		1C9252E728B2A26A004FC502 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C9252E528B2A26A004FC502 /* Main.storyboard */; };
 		1C9252E928B2A26A004FC502 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C9252E828B2A26A004FC502 /* Assets.xcassets */; };
 		1C9252EC28B2A26A004FC502 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C9252EA28B2A26A004FC502 /* LaunchScreen.storyboard */; };
+		1C9252F828B2BE3C004FC502 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9252F728B2BE3C004FC502 /* SettingsViewController.swift */; };
+		1C9252FA28B2C119004FC502 /* PercentageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9252F928B2C119004FC502 /* PercentageViewCell.swift */; };
+		1C9252FC28B2C695004FC502 /* DarkModeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9252FB28B2C695004FC502 /* DarkModeTableViewCell.swift */; };
+		1C9252FE28B2CC64004FC502 /* KeysValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9252FD28B2CC64004FC502 /* KeysValues.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		1C9252E828B2A26A004FC502 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C9252EB28B2A26A004FC502 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C9252ED28B2A26A004FC502 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C9252F728B2BE3C004FC502 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		1C9252F928B2C119004FC502 /* PercentageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentageViewCell.swift; sourceTree = "<group>"; };
+		1C9252FB28B2C695004FC502 /* DarkModeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeTableViewCell.swift; sourceTree = "<group>"; };
+		1C9252FD28B2CC64004FC502 /* KeysValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeysValues.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +67,10 @@
 				1C9252DF28B2A26A004FC502 /* AppDelegate.swift */,
 				1C9252E128B2A26A004FC502 /* SceneDelegate.swift */,
 				1C9252E328B2A26A004FC502 /* ViewController.swift */,
+				1C9252FD28B2CC64004FC502 /* KeysValues.swift */,
+				1C9252F728B2BE3C004FC502 /* SettingsViewController.swift */,
+				1C9252FB28B2C695004FC502 /* DarkModeTableViewCell.swift */,
+				1C9252F928B2C119004FC502 /* PercentageViewCell.swift */,
 				1C9252E528B2A26A004FC502 /* Main.storyboard */,
 				1C9252E828B2A26A004FC502 /* Assets.xcassets */,
 				1C9252EA28B2A26A004FC502 /* LaunchScreen.storyboard */,
@@ -138,9 +150,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C9252FA28B2C119004FC502 /* PercentageViewCell.swift in Sources */,
 				1C9252E428B2A26A004FC502 /* ViewController.swift in Sources */,
+				1C9252FC28B2C695004FC502 /* DarkModeTableViewCell.swift in Sources */,
 				1C9252E028B2A26A004FC502 /* AppDelegate.swift in Sources */,
+				1C9252FE28B2CC64004FC502 /* KeysValues.swift in Sources */,
 				1C9252E228B2A26A004FC502 /* SceneDelegate.swift in Sources */,
+				1C9252F828B2BE3C004FC502 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

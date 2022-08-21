@@ -116,9 +116,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Tip Calculator" id="1uU-4s-btD">
-                        <barButtonItem key="leftBarButtonItem" title="Lights Off" style="plain" id="uGs-9A-OMH">
+                        <barButtonItem key="leftBarButtonItem" image="gear" catalog="system" style="plain" id="uGs-9A-OMH">
                             <connections>
-                                <action selector="enableOrDisableDarkModeBtnIsPressed:" destination="BYZ-38-t0r" id="DMd-et-MGJ"/>
+                                <segue destination="bz5-Ry-UK4" kind="show" id="bkP-kb-NP0"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Calculate" id="AVP-Zt-9YN">
@@ -130,7 +130,6 @@
                     <connections>
                         <outlet property="PartySizeTxtfield" destination="nLI-H7-23q" id="utv-da-bEy"/>
                         <outlet property="billAmountTextfield" destination="A4n-Q7-g9a" id="kHA-Bj-4hY"/>
-                        <outlet property="darkModeButton" destination="uGs-9A-OMH" id="OHk-pe-Jwq"/>
                         <outlet property="splitLabel" destination="4Kn-fA-uRU" id="oST-VW-9qH"/>
                         <outlet property="tipAmountLbl" destination="ihq-0h-AUa" id="yaC-3w-Mym"/>
                         <outlet property="tipControl" destination="D49-HE-29f" id="hJE-3V-gTT"/>
@@ -141,20 +140,42 @@
             </objects>
             <point key="canvasLocation" x="-168" y="73"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="9q3-gc-23n">
             <objects>
-                <viewController id="bz5-Ry-UK4" sceneMemberID="viewController">
+                <viewController id="bz5-Ry-UK4" customClass="SettingsViewController" customModule="Prework" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B9D-sH-JR3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hal-yv-zDI">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <sections/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="4Wb-YN-mEC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hal-yv-zDI" firstAttribute="top" secondItem="4Wb-YN-mEC" secondAttribute="top" id="2sT-Tg-751"/>
+                            <constraint firstItem="hal-yv-zDI" firstAttribute="trailing" secondItem="4Wb-YN-mEC" secondAttribute="trailing" id="4j4-OV-rOi"/>
+                            <constraint firstItem="hal-yv-zDI" firstAttribute="leading" secondItem="4Wb-YN-mEC" secondAttribute="leading" id="ftB-AE-Gfk"/>
+                            <constraint firstAttribute="bottom" secondItem="hal-yv-zDI" secondAttribute="bottom" id="wbY-Aq-otp"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="I3K-mP-gVa">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Ozb-zb-c4h">
+                            <connections>
+                                <action selector="SaveButtonWasPressed:" destination="bz5-Ry-UK4" id="97Q-YW-tLg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableview" destination="hal-yv-zDI" id="lrd-fX-8nV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yqX-A3-H3X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="696" y="63"/>
+            <point key="canvasLocation" x="695.6521739130435" y="62.946428571428569"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wPl-YO-R2o">
@@ -176,6 +197,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="gear" catalog="system" width="128" height="119"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
