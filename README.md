@@ -2,9 +2,6 @@
 
 **Calc** is a tip calculator application for iOS.
 
-Submitted by: **Angel Zambrano**
-
-Time spent: **7** hours spent in total
 
 ## User Stories
 
@@ -28,9 +25,6 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-
-<img src='https://imgur.com/gallery/F58gu06' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-https://imgur.com/gallery/F58gu06
 
 ![video2](https://user-images.githubusercontent.com/29695936/185813380-10853fd0-02b7-4b96-b4d7-de53e3212903.gif)
 
